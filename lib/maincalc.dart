@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/services.dart';
 
 class MainCalc extends StatefulWidget {
@@ -15,7 +14,6 @@ class _MainCalcState extends State<MainCalc> {
   TextEditingController textEditingController3 = TextEditingController();
   double amount = 0, term = 0, rate = 0, month = 0, totalInterest = 0, totalPayment = 0;
   bool showResults = false;
-  final player = AudioPlayer();
 
   Widget buildInputRow(String labelText, TextEditingController controller, {String? suffixText}) {
   return Row(
