@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
+
 import 'package:flutter/services.dart';
 
 class MainCalc extends StatefulWidget {
@@ -15,7 +15,7 @@ class _MainCalcState extends State<MainCalc> {
   TextEditingController textEditingController3 = TextEditingController();
   double amount = 0, term = 0, rate = 0, month = 0, totalInterest = 0, totalPayment = 0;
   bool showResults = false;
-  final player = AudioPlayer();
+  
 
   Widget buildInputRow(String labelText, TextEditingController controller, {String? suffixText}) {
   return Row(
@@ -23,7 +23,7 @@ class _MainCalcState extends State<MainCalc> {
       Text(
         labelText,
         style: const TextStyle(
-          fontSize:20   // 设置文本部分的宽度
+          fontSize:16   
         ),
       ),
       Expanded(
@@ -71,7 +71,7 @@ class _MainCalcState extends State<MainCalc> {
           minWidth: 200,
           height: 50,
           child: ElevatedButton(
-            onPressed: Calculator,
+            onPressed: calculator,
             child: const Text(
               "Calculate",
               style: TextStyle(fontSize: 12),
@@ -82,7 +82,7 @@ class _MainCalcState extends State<MainCalc> {
           minWidth: 200,
           height: 50,
           child: ElevatedButton(
-            onPressed: Clear,
+            onPressed: clear,
             child: const Text(
               "Clear",
               style: TextStyle(fontSize: 12),
@@ -92,7 +92,7 @@ class _MainCalcState extends State<MainCalc> {
       ],
             ),
             Column(
-              crossAxisAlignment: CrossAxisAlignment.start,  // 设置交叉轴对齐方式为左对齐
+              crossAxisAlignment: CrossAxisAlignment.start,  
               children: [
               const SizedBox(height: 10),
               if (showResults) Text('Monthly Payment: ${month.toStringAsFixed(2)}'),
@@ -112,8 +112,8 @@ class _MainCalcState extends State<MainCalc> {
     );
   }
 
-  // ignore: non_constant_identifier_names
-  void Calculator() {
+ 
+  void calculator() {
       amount = double.tryParse(textEditingController1.text) ?? 0;
       term = double.tryParse(textEditingController2.text) ?? 0;
       rate = double.tryParse(textEditingController3.text) ?? 0;
@@ -125,8 +125,8 @@ class _MainCalcState extends State<MainCalc> {
       });
   }
 
-  // ignore: non_constant_identifier_names
-  void Clear() {
+ 
+  void clear() {
     setState(() {
     textEditingController1.clear();
     textEditingController2.clear();

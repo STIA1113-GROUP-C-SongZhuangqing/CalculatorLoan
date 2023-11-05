@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SplashScreen(), // 设置启动页面为 SplashScreen
+      home: const SplashScreen(), 
     );
   }
 }
@@ -31,11 +31,11 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // 使用延时函数来等待一段时间后自动跳转
+  
     Future.delayed(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const MainCalc()), // 跳转到计算器界面
+        MaterialPageRoute(builder: (context) => const MainCalc()), 
       );
     });
   }
@@ -44,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Image.asset('assets/calculator.png', width: 400, height: 400,), // 显示图片
+        child: Image.asset('assets/calculator.png', width: 400, height: 400,), 
       ),
     );
   }
