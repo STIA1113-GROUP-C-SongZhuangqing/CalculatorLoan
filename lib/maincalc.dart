@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 
+=======
+>>>>>>> a2cd4b0c63bca557393f71f0a4c4aff14a667f62
 import 'package:flutter/services.dart';
 
 class MainCalc extends StatefulWidget {
@@ -15,7 +18,10 @@ class _MainCalcState extends State<MainCalc> {
   TextEditingController textEditingController3 = TextEditingController();
   double amount = 0, term = 0, rate = 0, month = 0, totalInterest = 0, totalPayment = 0;
   bool showResults = false;
+<<<<<<< HEAD
   
+=======
+>>>>>>> a2cd4b0c63bca557393f71f0a4c4aff14a667f62
 
   Widget buildInputRow(String labelText, TextEditingController controller, {String? suffixText}) {
   return Row(
