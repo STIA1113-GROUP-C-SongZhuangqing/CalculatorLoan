@@ -102,7 +102,7 @@ class _MainCalcState extends State<MainCalc> {
               if (showResults) Text('Total Interest: ${totalInterest.toStringAsFixed(2)}'),
               const SizedBox(height: 4),
             ],
-)
+            )
           ]),
         ),
       ),
@@ -129,6 +129,9 @@ class _MainCalcState extends State<MainCalc> {
     textEditingController1.clear();
     textEditingController2.clear();
     textEditingController3.clear();
+    setState(() {
+      showResults = false;
+      });
                 }
     );
   }
